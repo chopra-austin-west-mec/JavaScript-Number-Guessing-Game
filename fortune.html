@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Page Title</title>
+    <script>
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        
+        function tellFortune(children, partner, live, job){
+            var num1;
+            var num2;
+            var num3;
+            var num4;
+            
+            num1 = Math.floor(Math.random() * 63)
+            num2 = Math.floor(Math.random() * 37)
+            num3 = Math.floor(Math.random() * 15)
+            num4 = Math.floor(Math.random() * 7)
+          
+              
+            alert("You will have " + children + " children, and have a wife named " + partner + ", you will live " + live + " and have a job as " + job )
+            alert("your lucky numbers are " + num1 + ", "+ num2 + ", "+ num3 + ", "+ num4)
+            
+            
+            
+        }
+        
+        function run() {
+            var children = [1,4,65,7,9876,124,6453,234,54];
+            var partner = ["Sophia" ,"Emma","Olivia","Ava","Mia","Isabella","Zoe"]
+            var live = ["In Toronto, Canada" ,"In Berlin, Germany" , "In Munich, Germany","In Tokyo, Japan","In Auckland, New Zealand","In Zurich, Switzerland", "In Sydney, Australia","In Melbourne, Australia","In Vancouver, Canada","In Vienna, Austria", "Under a brige, with a grumpy old troll"]
+            var job = ["an Orthodontist","a Dentist","a Computer Systems Analyst","an Astronot", "a Sewer cleaner"]
+            
+            tellFortune(children[getRandomInt(1,9)], partner[getRandomInt(1,7)], live[getRandomInt(1,11)], job[getRandomInt(1,5)])
+            
+        }
+        run();
+    </script>
+</head>
+
+<body onload="run()">
+
+<h1> Hello</h1>
+
+</body>
+</html>
